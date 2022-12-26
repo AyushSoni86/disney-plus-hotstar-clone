@@ -9,7 +9,7 @@ function ImgSlider() {
     dots: true,
     infinite: true,
     speed: 400,
-    slidesToShow: 1,
+    slidesToShow: 1, 
     slidesToScroll: 1,
     autoplay: true,
   };
@@ -20,6 +20,12 @@ function ImgSlider() {
       </Wrap>
       <Wrap>
         <img src="/images/slider-badag.jpg" alt="" />
+      </Wrap>
+      <Wrap>
+        <img src="/images/slider-scale.jpg" alt="" />
+      </Wrap>
+      <Wrap>
+        <img src="/images/slider-scales.jpg" alt="" />
       </Wrap>
     </Carousel>
   );
@@ -44,13 +50,13 @@ const Carousel = styled(Slider)`
     overflow: visible;
   }
 
-  button{
+  button {
     z-index: 1;
   }
 `;
 
 const Wrap = styled.div`
-cursor: pointer;
+  cursor: pointer;
   img {
     border: 4px solid transparent;
     width: 100%;
@@ -59,8 +65,8 @@ cursor: pointer;
     box-shadow: rgb(0 0 0/69%) 0px 26px 30px -10px,
       rgb(0 0 0/ 73%) 0px 16px 10px -10px;
     transition-duration: 300ms;
-      &:hover{
-        border: 4px solid rgba(249,249,249,0.8);
-      }
+    &:hover {
+      border: 4px solid rgba(249, 249, 249, 0.8);
+    }
   }
 `;
