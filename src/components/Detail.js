@@ -17,12 +17,17 @@ function Detail() {
         </PlayButton>
         <TrailerButton>
           <img src="/images/play-icon-white.png" alt="" />
-          <span>PLAY</span>
-
+          <span>Trailer</span>
         </TrailerButton>
-        <AddButton></AddButton>
-        <GroupWatchButton></GroupWatchButton>
+        <AddButton>
+          <span>+</span>
+        </AddButton>
+        <GroupWatchButton>
+          <img src="/images/group-icon.png" alt="" />
+        </GroupWatchButton>
       </Controls>
+      <Subtitle>this is the subtitle</Subtitle>
+      <Description>This is the description for the movie</Description>
     </Container>
   );
 }
@@ -62,8 +67,60 @@ const ImageTitle = styled.div`
   }
 `;
 
-const Controls = styled.div``;
-const PlayButton = styled.button``;
-const TrailerButton = styled.button``;
-const AddButton = styled.button``;
-const GroupWatchButton = styled.button``;
+const Controls = styled.div`
+  display: flex;
+  align-items: center;
+`;
+const PlayButton = styled.button`
+  border-radius: 4px;
+  font-size: 15px;
+  padding: 0px 24px;
+  margin-right: 22px;
+  display: flex;
+  align-items: center;
+  height: 56px;
+  background: rgb(249, 249, 249);
+  border: none;
+  letter-spacing: 1.8px;
+  cursor: pointer;
+  &:hover {
+    background: rgb(198, 198, 198);
+  }
+`;
+const TrailerButton = styled(PlayButton)`
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgb(249, 249, 249);
+  color: rgb(249, 249, 249);
+  text-transform: uppercase;
+`;
+const AddButton = styled.button`
+  margin-right: 16px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 2px solid white;
+  background-color: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  span {
+    font-size: 30px;
+    color: white;
+  }
+`;
+const GroupWatchButton = styled(AddButton)`
+  background: rgb(0, 0, 0);
+`;
+const Subtitle = styled.div`
+  color: rgb(249, 249, 249);
+  font-size: 15px;
+  min-height: 20px;
+  margin-top: 26px;
+`;
+const Description = styled.div`
+  line-height: 1.4;
+  font-size: 20px;
+  margin-top: 16px;
+  color: rgb(249, 249, 249);
+`;
