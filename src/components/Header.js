@@ -91,10 +91,10 @@ const Header = (props) => {
             </a>
           </NavMenu>
           <SignOut>
-            <UserImg src={userPhoto} alt={userPhoto} />
-            <DropDown>
+            <UserImg onClick={signOut} src={userPhoto} alt={userPhoto} />
+            {/* <DropDown>
               <span onClick={signOut}>Sign Out</span>
-            </DropDown>
+            </DropDown> */}
           </SignOut>
         </>
       )}
